@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8b9c1664-82ea-4072-a772-e6c7dfdda26d" created="2.4.0" activeEnvironment="Live Server" name="Football RET API" resourceRoot="" updated="2.4.0 2018-06-08T12:50:23Z" encryptionMode="Not encrypted" soapui-version="5.1.1" abortOnError="false" runType="SEQUENTIAL" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="8b9c1664-82ea-4072-a772-e6c7dfdda26dfileName">Football-RET-API-readyapi-project</con:setting></con:settings><con:vcsConfiguration><con:vcsName>Git</con:vcsName><con:repositoryIdentifier>https://github.com/Mugesh-Rajaram/SoapUI-Football.git</con:repositoryIdentifier></con:vcsConfiguration><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script></con:eventHandlers><con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep"><con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script></con:eventHandlers><con:authRepository/><con:tags/><con:sensitiveInformation/><con:environment name="Live Server" id="ad82de82-46f0-4966-9372-8d9c961189eb"><con:service type="REST" name="Football API"><con:endpoint domain="" incomingWss="" outgoingWss="" password="" username="" wssTimeToLive="" wssType="" authProfile="No Authorization">http://api.football-data.org</con:endpoint></con:service><con:databaseConnectionContainer/><con:jmsConnectionContainer/></con:environment><con:environment name="Localhost" id="076fe9f4-42ac-40ff-8f49-4bb1dd851c53"><con:service type="REST" name="Football API"><con:endpoint username="" password="" domain="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="" authProfile="No Authorization">http://localhost:4200</con:endpoint></con:service><con:databaseConnectionContainer/><con:jmsConnectionContainer/></con:environment></con:soapui-project>
